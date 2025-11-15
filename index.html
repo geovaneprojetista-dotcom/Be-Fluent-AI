@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be Fluent AI</title>
+    <meta name="theme-color" content="#0D1B2A" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#F2C94C',      // Yellow
+              'brand-secondary': '#0D1B2A',    // Dark Blue BG
+              'brand-accent': '#3A86FF',       // Cyan/Blue
+              'brand-dark': '#415A77',         // Gray
+              'brand-light': '#1B2F45',        // Card BG
+              'text-primary': '#E0E1DD',
+              'text-secondary': '#778DA9',
+              'feedback-correct': '#7AE582',   // Green
+              'feedback-incorrect': '#3A86FF', // Cyan for "needs adjustment"
+              'feedback-neutral': '#F2C94C',   // Yellow for "medium"
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Poppins', 'sans-serif'],
+            },
+            boxShadow: {
+              'card': '0 4px 14px 0 rgba(58, 134, 255, 0.1)',
+              'glow': '0 0 15px 0 rgba(58, 134, 255, 0.6)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @keyframes pulse-stress {
+        0%, 100% {
+          transform: scale(1);
+          text-shadow: 0 0 0 rgba(242, 201, 76, 0);
+        }
+        50% {
+          transform: scale(1.02);
+          text-shadow: 0 0 8px rgba(242, 201, 76, 0.5);
+        }
+      }
+      .stress-text strong {
+        display: inline-block;
+        animation: pulse-stress 2s infinite ease-in-out;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-secondary font-sans text-text-primary">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

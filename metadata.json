@@ -1,0 +1,7 @@
+{
+  "name": "Be Fluent AI: English Conversation Coach",
+  "description": "Seu professor AI de conversação. Fale inglês com confiança.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
